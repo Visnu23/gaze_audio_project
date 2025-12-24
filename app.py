@@ -186,7 +186,8 @@ st.markdown(
 if st.session_state.running:
     simulate_step()
     time.sleep(st.session_state.speed / 1000)
-    st.experimental_rerun()
+    st.rerun()
+
 
 # Display frame
 st.image(
@@ -197,3 +198,4 @@ st.image(
 # Logs
 st.markdown("### 📋 Event Log")
 st.code("\n".join(st.session_state.logs), language="text")
+
